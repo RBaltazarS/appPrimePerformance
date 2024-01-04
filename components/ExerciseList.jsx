@@ -1,9 +1,11 @@
 //React Native.
-import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 //React.
 import React from 'react'
 //Hooks.
 import { useRouter } from 'expo-router'
+//Expo Img.
+import { Image } from 'expo-image';
 //RN Responsive Screen.
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 //Reanimated.

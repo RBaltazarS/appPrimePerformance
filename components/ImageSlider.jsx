@@ -1,7 +1,9 @@
 //React Native.
-import { View, Text, Image } from 'react-native'
+import { View, Text } from 'react-native'
 //React.
 import React from 'react'
+//Expo Img
+import { Image } from 'expo-image';
 //Snap Carousel. 
 import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
 //Constants.

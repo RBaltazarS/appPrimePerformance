@@ -1,5 +1,5 @@
 //React Native.
-import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 //React.
 import React from 'react'
 //RN Responsive Screen.
@@ -12,6 +12,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 //RN Reanimated.
 import Animated, { FadeInDown } from 'react-native-reanimated';
+//Expo Img
+import { Image } from 'expo-image';
 
 
 export default function BodyParts() {
@@ -46,7 +48,7 @@ const BodyPartCard = ({ item, router, index }) => {
         className="flex justify-end p-4 mb-4">
         <Image
           source={item.image}
-          resizeMode='cover'
+          contentFit='cover' //OBSERVAR ESSA VARIAVEL CONTENT FIT, TALVEZ ALTERAR. 
           style={{ width: wp(44), height: wp(52) }}
           className="rounded-[35px] absolute"
         />

@@ -1,10 +1,12 @@
 //React Native.
-import { View, Text, Image } from 'react-native'
+import { View, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 //React.
 import React from 'react'
 //Expo.
 import { StatusBar } from 'expo-status-bar'
+//Expo Img.
+import { Image } from 'expo-image';
 //RN Responsive Screen.
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 //Icons.
@@ -38,7 +40,7 @@ export default function Home() {
 
         <View className="flex justify-center items-center space-y-2">
           <Image
-            source={require("../assets/images/avatar.png")}
+            source={require('../assets/images/avatar.png')}
             style={{ height: hp(6), width: hp(6) }}
             className="rounded-full"
           />
@@ -51,7 +53,7 @@ export default function Home() {
         </View>
       </View>
 
-      {/* Img Slider */}
+      {/* Image Slider */}
       <View>
         <ImageSlider />
       </View>
@@ -60,6 +62,7 @@ export default function Home() {
       <View className="flex-1">
         <BodyParts />
       </View>
+
 
     </SafeAreaView>
   )
