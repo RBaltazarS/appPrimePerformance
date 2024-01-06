@@ -20,14 +20,14 @@ export default function BodyParts() {
   const router = useRouter();
   return (
     <View className="mx-4">
-      <Text style={{ fontSize: hp(3) }} className="font-semibold text-neutral-700">
+      <Text style={{ fontSize: hp(3) }} className="font-semibold text-rose-500">
         Exercises
       </Text>
 
       <FlatList
         data={bodyParts}
         numColumns={2}
-        keyExtractor={item => item.name}
+        keyExtractor={item => item.name.toUpperCase()}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 50, paddingTop: 20 }}
         columnWrapperStyle={{
@@ -48,12 +48,12 @@ const BodyPartCard = ({ item, router, index }) => {
         className="flex justify-end p-4 mb-4">
         <Image
           source={item.image}
-          contentFit='cover' //OBSERVAR ESSA VARIAVEL CONTENT FIT, TALVEZ ALTERAR. 
+          contentFit='cover' 
           style={{ width: wp(44), height: wp(52) }}
           className="rounded-[35px] absolute"
         />
         <LinearGradient
-          colors={['transparent', 'rgba(0,0,0,0.9)']}
+          colors={['transparent', 'rgb(0,0,0)']}
           style={{ width: wp(44), height: hp(15) }}
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
@@ -62,7 +62,7 @@ const BodyPartCard = ({ item, router, index }) => {
 
         <Text
           style={{ fontSize: hp(2.3) }}
-          className="text-white font-semibold text-center tracking-wide"
+          className="text-white font-semibold text-center tracking-wide uppercase"
         >
           {item?.name}
         </Text>

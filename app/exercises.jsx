@@ -54,8 +54,8 @@ export default function Exercises() {
 
       {/* Exercises */}
       <View className="mx-4 space-y-3 mt-4">
-        <Text style={{ fontSize: hp(3) }} className="font-semibold text-neutral-700">
-          {item.name} exercises
+        <Text style={{ fontSize: hp(3) }} className="font-semibold text-black">
+          {item.name.toUpperCase()} Exercises
         </Text>
         <View className="mb-10">
           <ExerciseList data={exercises} />

@@ -45,7 +45,7 @@ const ExerciseCard = ({ item, router, index }) => {
 
         <Text
           style={{ fontSize: hp(1.7) }}
-          className="text-neutral-700 font-semibold ml-1  tracking-wide"
+          className="text-rose-500 font-semibold ml-1 tracking-wide uppercase"
         >
           {
             item?.name?.length > 20 ? item.name.slice(0, 20) + '...' : item.name

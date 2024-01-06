@@ -26,7 +26,7 @@ export default function Home() {
         <View className="space-y-2">
           <Text
             style={{ fontSize: hp(4.5) }}
-            className="font-bold tracking-wider text-neutral-700"
+            className="font-bold tracking-wider text-black"
           >
             READY TO
           </Text>

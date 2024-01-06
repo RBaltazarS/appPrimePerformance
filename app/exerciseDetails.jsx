@@ -30,7 +30,7 @@ export default function exerciseDetails() {
 
       <TouchableOpacity
         onPress={() => router.back()}
-        className="mx-2 absolute rounded-full mt-2 right-0"
+        className="mx-4 absolute rounded-full mt-8 right-0"
       >
         <Anticons name="closecircle" size={hp(4.5)} color="#f43f5e" />
       </TouchableOpacity>
@@ -41,34 +41,34 @@ export default function exerciseDetails() {
         <Animated.Text
           entering={FadeInDown.duration(300).springify()}
           style={{ fontSize: hp(3.5) }}
-          className="font-semibold text-neutral-800 tracking-wide"
+          className="font-semibold text-black tracking-wide uppercase"
         >
-          {item.name}
+          {item.name.toUpperCase}
         </Animated.Text>
         <Animated.Text
           entering={FadeInDown.delay(100).duration(300).springify()}
           style={{ fontSize: hp(2) }}
-          className=" text-neutral-700 tracking-wide"
+          className=" text-black tracking-wide"
         >
-          Equipment <Text className="font-bold text-neutral-800">
+          Equipment <Text className="font-bold text-rose-500 uppercase">
             {item?.equipment}
           </Text>
         </Animated.Text>
         <Animated.Text
           entering={FadeInDown.delay(200).duration(300).springify()}
           style={{ fontSize: hp(2) }}
-          className=" text-neutral-700 tracking-wide"
+          className=" text-black tracking-wide"
         >
-          Secondary Muscles <Text className="font-bold text-neutral-800">
+          Secondary Muscles <Text className="font-bold text-rose-500 uppercase">
             {item?.secondaryMuscles}
           </Text>
         </Animated.Text>
         <Animated.Text
           entering={FadeInDown.delay(300).duration(300).springify()}
           style={{ fontSize: hp(2) }}
-          className=" text-neutral-700 tracking-wide"
+          className=" text-black uppercase tracking-wide"
         >
-          Target <Text className="font-bold text-neutral-800">
+          Target <Text className="font-bold text-rose-500 uppercase">
             {item?.target}
           </Text>
         </Animated.Text>
@@ -76,7 +76,7 @@ export default function exerciseDetails() {
         <Animated.Text
           entering={FadeInDown.delay(400).duration(300).springify()}
           style={{ fontSize: hp(3) }}
-          className="font-semibold text-neutral-800 tracking-wide"
+          className="font-semibold text-rose-500 tracking-wide"
         >
           Instructions
         </Animated.Text>
@@ -88,7 +88,7 @@ export default function exerciseDetails() {
                 entering={FadeInDown.delay((index + 5) * 100).duration(300).springify()}
                 key={instruction}
                 style={{ fontSize: hp(1.7) }}
-                className="text-neutral-800"
+                className="text-black uppercase"
               >
                 {instruction}
               </Animated.Text>
